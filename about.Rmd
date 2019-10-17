@@ -1,5 +1,5 @@
 ---
-title: "My awesome website"
+title: "about me"
 output: 
   html_document:
     toc: true
@@ -7,13 +7,4 @@ output:
     theme: cerulean
 ---
 
-# This is Jeff's awesome website
-
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
-
-## Let's add links
-
-I often use [google](google.com) to do data science.
-
-## And images
-![](images/book.jpeg)
+# did it
