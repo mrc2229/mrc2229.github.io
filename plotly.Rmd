@@ -1,16 +1,43 @@
 ---
 title: "Plotly"
-author: "Matthew Curran"
-date: "October 22, 2019"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 My name is matt and I made a website with _interactive graphics_
 
-```{r}
+```{r include=FALSE}
 library(tidyverse)
 library(viridis)
 library(p8105.datasets)
+
 library(plotly)
+```
+
+```{r}
+set.seed(1)
+
+data(nyc_airbnb)
+nyc_airbnb = 
+  nyc_airbnb %>% 
+  mutate(rating = review_scores_location / 2) %>%
+  select(
+    neighbourhood_group, neighbourhood, rating, price, room_type, lat, long) %>%
+  filter(
+    !is.na(rating), 
+    neighbourhood_group == "Manhattan",
+    room_type == "Entire home/apt",
+    price %in% 100:500)  %>% 
+  sample_n(5000)
+```
+
+```{r}
+nyc_airbnb %>%
+  mutate(text_label = str_c("Price: $", price, '\nRating: ', rating)) %>% 
+  plot_ly(
+    x = ~lat, y = ~long, type = "scatter", mode = "markers",
+    color = ~price, text = ~text_label, alpha = 0.5)
 ```
 
