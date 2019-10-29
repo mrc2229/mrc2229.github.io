@@ -1,23 +1,18 @@
 ---
-title: "My awesome website"
+title: "Matthew Curran"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is Matt's awesome website
+# Meet Me
 
 you can learn about me [here](about.html)
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
-
-## Let's add links
-
-I often use [google](google.com) to do data science.
 
 ## And images
-![](images/book.jpeg)
+![](images/Me.JPG)
 
 
 
