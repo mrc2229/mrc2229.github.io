@@ -1,12 +1,11 @@
 ---
-title: "About Me"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-## Education and Work Experience
+# My Education and Work Experience
 
 ### Current Education and Employment
 
@@ -23,5 +22,5 @@ output:
 * While at Penn State I double majored in Forensic Science and Immunology Infectious Diseases with a minor in Biochemistry and Molecular Biology.
 
 
-## Resume
+# Resume
 * For more about me, details about my work history, and a list of my skills please see my resume attached [here.](files/Curran_Matthew_Resume_09_11_19.pdf)
