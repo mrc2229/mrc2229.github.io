@@ -10,7 +10,7 @@ navbar:
     - icon: fa-envelope fa-lg
       href: mailto:<mrc2229@cumc.columbia.edu>
     - icon: fa-github fa-lg
-      href: http://github.com/mrc2229/
+      href: https://github.com/mrc2229/
     - text: "LinkedIn"
       href: https://www.linkedin.com/in/matthew-curran-147528176/
 output:
