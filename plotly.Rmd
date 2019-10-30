@@ -1,10 +1,12 @@
 ---
-title: "Plotly"
+title: "Reference Plotly: NOT PART OF WEBSITE"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
+
+## Note for the TA: I left this in for my own reference later. Not currently included on the website and it is not part of Homework 4.
 
 My name is matt and I made a website with _interactive graphics_
 
@@ -12,7 +14,6 @@ My name is matt and I made a website with _interactive graphics_
 library(tidyverse)
 library(viridis)
 library(p8105.datasets)
-
 library(plotly)
 ```
 

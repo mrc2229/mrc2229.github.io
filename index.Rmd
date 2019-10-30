@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-Me (left) with my girlfriend Madeline Heckman (right)
+_Me (left) with my girlfriend Madeline Heckman (right)_
 ![](images/Me.JPG)
 
 ## About Me
