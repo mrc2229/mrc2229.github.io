@@ -6,13 +6,25 @@ output:
     toc_float: true
 ---
 
-# Meet Me
-
-you can learn about me [here](about.html)
-
-
-## And images
+Me (left) with my girlfriend Madeline Heckman (right)
 ![](images/Me.JPG)
+
+
+## My Education and Work History
+
+* You can learn about me and find my resume [here](about.html)
+
+## Example Work
+
+* For a demonstration of my knowledge in R I have provided some interactive plots and graphs on a [flexdashboard.](dashboard.html) These plots were created using a NYC Restaraunt Inspection Dataset.
+
+* For more examples of my work, feel free to click on the GitHub icon in the navigation bar to view my GitHub account.
+
+## Contact Me
+
+* I can be contacted via email using the mail icon in the navigation bar or the by messaging me on LinkedIn, also viewable from the navigation bar.
+
+
 
 
 
