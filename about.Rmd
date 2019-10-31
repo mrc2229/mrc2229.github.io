@@ -11,7 +11,7 @@ output:
 
 * My name is Matthew Curran, I am a second year student at the Columbia University Mailman School of Public health getting my Masters in Epidemiology with a certificate in Applied Biostatistics. I expect to graduate in May 2020.
 
-* While studying at Columbia, I am working at the New York City Department of Health conducting foodborne surveilence. Primarily for Salmonella and Shigella.
+* While studying at Columbia, I am working at the New York City Department of Health conducting foodborne surveillance; primarily for Salmonella and Shigella.
 
 ### Previous Employment
 

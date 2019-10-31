@@ -40,7 +40,7 @@ inspection_data =
 
 Column {data-width=600}
 -----------------------------------------------------------------------
-### Interactive Violinplot of Scores across the 8 Most Common NYC Restaurant Types
+### Interactive Violin Plot of Scores across the 8 Most Common NYC Restaurant Types
 
 ```{r}
 common_rest =
@@ -59,7 +59,7 @@ inner_join(inspection_data, common_rest, by = "rest_type") %>%
 
 Column {data-width=400}
 -----------------------------------------------------------------------
-### Dotplot of Grades and Scores By Borough
+### Interactive Dot Plot of Grades and Scores By Borough
 
 ```{r}
 inspect_grades = 
@@ -72,7 +72,7 @@ inspect_grades =
 inspect_grades
 ```
 
-### The Top 30 NYC Zipcodes by the number of Critical Violations given
+### The Top 30 NYC Zip Codes by the number of Critical Violations given
 
 ```{r}
 common_zip =
