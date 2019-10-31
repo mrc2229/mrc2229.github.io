@@ -26,32 +26,20 @@ inspection_data =
   filter(
     !is.na(grade), 
     !is.na(score))%>%
+  filter(score>0)%>%
   rename(rest_type = cuisine_description)%>%
   mutate(
-    rest_type = recode(rest_type, "CafÃ©/Coffee/Tea" = "Coffee Shop"))%>%
+    rest_type = recode(rest_type, "CafÃ©/Coffee/Tea" = "Coffee Shop", 
+                       "Latin (Cuban, Dominican, Puerto Rican, South & Central American)" = "Latin")) %>%
   filter(grade == "A"|
         grade == "B"|
         grade == "C") %>%
   sample_n(5000)
 ```
 
-Column {data-width=650}
+Column {data-width=600}
 -----------------------------------------------------------------------
-
-### Interactive Scatterplot of Grade and Scores By Borough
-
-```{r}
-inspect_grades = 
-  inspection_data %>%
-  mutate(text_label = str_c("Score", score, 'Grade', grade)) %>% 
-  plot_ly(
-    x = ~score, y = ~grade, type = "scatter", mode = "markers",
-    color = ~boro, text = ~text_label, alpha = 0.5)
-```
-
-Column {data-width=350}
------------------------------------------------------------------------
-### Boxplot of Scores across the 8 Most Common NYC Restaurant Types
+### Interactive Violinplot of Scores across the 8 Most Common NYC Restaurant Types
 
 ```{r}
 common_rest =
@@ -63,22 +51,38 @@ common_rest =
 inner_join(inspection_data, common_rest, by = "rest_type") %>% 
   mutate(text_label = str_c("Score", score, 'Grade', grade)) %>% 
   mutate(rest_type = fct_reorder(rest_type, score)) %>% 
-  plot_ly(y = ~score, color = ~rest_type, type = "box",
+  plot_ly(y = ~score, color = ~rest_type, type = "violin",
           colors = "Set2", text = ~text_label)
 ```
 
-### The Top 20 NYC Zipcodes by the number of "B" Inspection Grades Given
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+### Dotplot of Grades and Scores By Borough
+
+```{r}
+inspect_grades = 
+  inspection_data %>%
+  mutate(text_label = str_c("Score", score, 'Grade', grade)) %>% 
+  plot_ly(
+    x = ~score, y = ~boro, type = "scatter", mode = "markers",
+    color = ~grade, text = ~text_label, alpha = 0.5)
+
+inspect_grades
+```
+
+### The Top 30 NYC Zipcodes by the number of Critical Violations given
 
 ```{r}
 common_zip =
   inspection_data %>% 
+  filter(critical_flag == "Critical") %>%
   count(zipcode, sort = TRUE) %>% 
-  top_n(20) %>% 
+  top_n(30) %>% 
   select(zipcode)
 
 inner_join(inspection_data, common_zip, by = "zipcode") %>%
   mutate(zipcode = as.factor(zipcode)) %>%
-  filter(grade == "B") %>%
   count(zipcode) %>% 
   mutate(zipcode = fct_reorder(zipcode, n)) %>% 
   plot_ly(x = ~zipcode, y = ~n, color = ~zipcode, type = "bar")
