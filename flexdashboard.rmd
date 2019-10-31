@@ -1,0 +1,86 @@
+---
+title: "My Example Flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(viridis)
+library(p8105.datasets)
+library(plotly)
+```
+
+
+```{r}
+set.seed(1)
+
+data("rest_inspec")
+inspection_data = 
+  rest_inspec %>% 
+  select(
+    boro, critical_flag, cuisine_description, street, zipcode, grade, score) %>%
+  filter(
+    !is.na(grade), 
+    !is.na(score))%>%
+  rename(rest_type = cuisine_description)%>%
+  mutate(
+    rest_type = recode(rest_type, "CafÃ©/Coffee/Tea" = "Coffee Shop"))%>%
+  filter(grade == "A"|
+        grade == "B"|
+        grade == "C") %>%
+  sample_n(5000)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Interactive Scatterplot of Grade and Scores By Borough
+
+```{r}
+inspect_grades = 
+  inspection_data %>%
+  mutate(text_label = str_c("Score", score, 'Grade', grade)) %>% 
+  plot_ly(
+    x = ~score, y = ~grade, type = "scatter", mode = "markers",
+    color = ~boro, text = ~text_label, alpha = 0.5)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+### Boxplot of Scores across the 8 Most Common NYC Restaurant Types
+
+```{r}
+common_rest =
+  inspection_data %>% 
+  count(rest_type, sort = TRUE) %>% 
+  top_n(8) %>% 
+  select(rest_type)
+
+inner_join(inspection_data, common_rest, by = "rest_type") %>% 
+  mutate(text_label = str_c("Score", score, 'Grade', grade)) %>% 
+  mutate(rest_type = fct_reorder(rest_type, score)) %>% 
+  plot_ly(y = ~score, color = ~rest_type, type = "box",
+          colors = "Set2", text = ~text_label)
+```
+
+### The Top 20 NYC Zipcodes by the number of "B" Inspection Grades Given
+
+```{r}
+common_zip =
+  inspection_data %>% 
+  count(zipcode, sort = TRUE) %>% 
+  top_n(20) %>% 
+  select(zipcode)
+
+inner_join(inspection_data, common_zip, by = "zipcode") %>%
+  mutate(zipcode = as.factor(zipcode)) %>%
+  filter(grade == "B") %>%
+  count(zipcode) %>% 
+  mutate(zipcode = fct_reorder(zipcode, n)) %>% 
+  plot_ly(x = ~zipcode, y = ~n, color = ~zipcode, type = "bar")
+```
+
