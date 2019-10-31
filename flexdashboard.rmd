@@ -38,7 +38,7 @@ inspection_data =
   sample_n(5000)
 ```
 
-Column {data-width=600}
+Column {data-width=550}
 -----------------------------------------------------------------------
 ### Interactive Violin Plot of Scores across the 8 Most Common NYC Restaurant Types
 
@@ -57,7 +57,7 @@ inner_join(inspection_data, common_rest, by = "rest_type") %>%
 ```
 
 
-Column {data-width=400}
+Column {data-width=450}
 -----------------------------------------------------------------------
 ### Interactive Dot Plot of Grades and Scores By Borough
 
