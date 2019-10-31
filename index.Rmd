@@ -23,7 +23,7 @@ _Me (left) with my girlfriend Madeline Heckman (right)_
 
 ## Example Work
 
-* For a demonstration of my knowledge in R I have provided some interactive plots and graphs on a [flexdashboard.](dashboard.html) These plots were created using an NYC Restaraunt Inspection Dataset.
+* For a demonstration of my knowledge in R I have provided some interactive plots and graphs on a [flexdashboard.](flexdashboard.html) These plots were created using an NYC Restaraunt Inspection Dataset.
 
 * For more examples of my work, feel free to click on the GitHub icon in the navigation bar to view my GitHub account.
 
