@@ -5,6 +5,8 @@ navbar:
   right:
     - text: "My Education and Work Experience"
       href: about.html
+    - text: "Project Example"
+      href: https://ilz2105.github.io/disasters.github.io/
     - text: "Work Example: Flexdashboard"
       href: flexdashboard.html
     - icon: fa-envelope fa-lg

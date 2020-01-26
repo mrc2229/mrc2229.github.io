@@ -25,6 +25,8 @@ _Me (left) with my girlfriend Madeline Heckman (right)_
 
 * For a demonstration of my knowledge in R I have provided some interactive plots and graphs on a [flexdashboard.](flexdashboard.html) These plots were created using the NYC Department of Health's Restaurant Inspection Dataset.
 
+* An example project of mine can be found [here.](https://ilz2105.github.io/disasters.github.io/) This was my final group project completed for my Data Science course at Columbia.
+
 * For more examples of my work, feel free to click on the GitHub icon in the navigation bar to view my GitHub account.
 
 ## Contact Me
