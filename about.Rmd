@@ -7,20 +7,22 @@ output:
 
 # My Education and Work Experience
 
-### Current Education and Employment
+### Current Employment and Education
 
-* My name is Matthew Curran, I am a second year student at the Columbia University Mailman School of Public health getting my Masters in Epidemiology with a certificate in Applied Biostatistics. I expect to graduate in May 2020.
-
-* While studying at Columbia, I am working at the New York City Department of Health conducting foodborne surveillance; primarily for Salmonella and Shigella.
+* My name is Matthew Curran, I am currently a City Research Scientist at he New York City Department of Health and Mental Hygiene analyzing the performance of New York City Alternative Care Sites in the COVID-19 pandemic response.
 
 ### Previous Employment
+
+* While studying at Columbia, I am worked at the New York City Department of Health conducting foodborne surveillance; primarily for Salmonella and Shigella.
 
 * Previously I worked in Baltimore for a Healthcare System called MedStar Health as a Simulation Specialist for two and a half years after graduating from Pennsylvania State University.
 
 ### Previous Education
 
+* Graduated in May from the Columbia University Mailman School of Public Health getting my Masters in Epidemiology with a certificate in Applied Biostatistics.
+
 * While at Penn State I double majored in Forensic Science and Immunology Infectious Diseases with a minor in Biochemistry and Molecular Biology.
 
 
 # Resume
-* For more about me, details about my work history, and a list of my skills please see my resume attached [here.](files/Curran_Matthew_Resume_01_23_2020.pdf)
+* For more about me, details about my work history, and a list of my skills please see my resume attached [here.](files/Research_Curran_Matthew_Resume_08_28_2020.pdf)
